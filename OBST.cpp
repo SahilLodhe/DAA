@@ -139,9 +139,21 @@ vector<vector<int>>finalMatrix(vector<vector<int>>&matrix,vector<vector<int>>&ro
     return matrix;
 }
 int main(){
-    vector<int>keys = {10,12,16,21,30,11};
-    vector<int>freq = {4,2,6,3,32,9};
-    int sz = keys.size();
+    vector<int>keys;
+    vector<int>freq;
+    int sz;
+    cout<<"Enter the dimension of the matrix"<<endl;
+    cin>>sz;
+    for(int i = 0;i<sz;i++){
+        cout<<"Enter the key number "<<i + 1<<endl;
+        int tempKey;
+        cin>>tempKey;
+        keys.push_back(tempKey);
+        cout<<"Enter the frequency of "<<tempKey<<endl;
+        int tempFreq;
+        cin>>tempFreq;
+        freq.push_back(tempFreq);
+    }
     vector<vector<int>>min_matrix(sz,vector<int>(sz,-1));
     vector<vector<int>>rootMatrix(sz,vector<int>(sz,-1));
     vector<vector<int>>result = finalMatrix(min_matrix,rootMatrix,sz,keys,freq);
