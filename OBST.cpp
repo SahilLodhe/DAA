@@ -110,7 +110,6 @@ vector<vector<int>>finalMatrix(vector<vector<int>>&matrix,vector<vector<int>>&ro
         ender = init - 1;
         while(ender < sz){
             int mn = INT_MAX;
-            unordered_map<int,int>mp;
             int final_root = -1;
             for(int i = starter;i<=ender;i++){
                 int temp = mn;
